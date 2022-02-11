@@ -5,8 +5,6 @@
 	The tool implements permission persistence through HOOK PasswordChangeNotify. Modified based on the original HookPasswordChange to add a simple 
 	HTTP request functionality via the WinINet API. When the administrator modifies the password, the user password will be transmitted to the remote 
 	server via the HTTP POST method.
-	
-	Please see my blog at clymb3r.wordpress.com for more information.
 
 	http://clymb3r.wordpress.com/2013/09/15/intercepting-password-changes-with-function-hooking/
 	http://carnal0wnage.attackresearch.com/2013/09/stealing-passwords-every-time-they.html
